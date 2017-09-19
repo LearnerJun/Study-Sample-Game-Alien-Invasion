@@ -2,10 +2,14 @@ import sys
 
 import pygame
 
+from settings import Settings
+
 def run_game():
 	#initialize game and create a screen
 	pygame.init()
-	screen = pygame.display.set_mode((1200, 800)) #size of screen
+	ai_settings = Settings()
+	screen = pygame.display.set_mode(
+	(ai_settings.screen_width, ai_settings.screen_height)) #size of screen
 												  #screen is a surface, 
 	pygame.display.set_caption("Alien Invasion")  #refresh surface while game start looping
 	
