@@ -1,7 +1,7 @@
 class Settings():
 	#store all settings
-	
-	def _init_(self):
+
+	def __init__(self):
 		#set screen
 		self.screen_width = 1200
 		self.screen_height = 800
