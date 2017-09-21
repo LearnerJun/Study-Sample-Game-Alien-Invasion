@@ -3,6 +3,7 @@ import sys
 import pygame
 
 from settings import Settings
+from ship import Ship
 
 def run_game():
 	#initialize game and create a screen
@@ -12,6 +13,9 @@ def run_game():
 	(ai_settings.screen_width, ai_settings.screen_height)) #size of screen
 												  #screen is a surface,
 	pygame.display.set_caption("Alien Invasion")  #refresh surface while game start looping
+
+	#create a ship
+	ship = Ship(screen)
 
 	#set the background color
 	bg_color = (230, 230, 230)
@@ -26,7 +30,7 @@ def run_game():
 
 		#update background color when events monitored
 		screen.fill(bg_color)
-
+		ship.blitme()
 		#display recent screen which is kept updating
 		pygame.display.flip()
 
